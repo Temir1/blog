@@ -1,23 +1,22 @@
 import React, { Fragment } from "react";
 import { Flex, Box, Text } from "rebass";
 
-import Logo from "./Logo";
+import BlogContent from "./BlogContent";
+import FlexStyle from "./FlexStyle";
+import BoxStyle from "./BoxStyle";
 
-const bg = "#e9e9e9";
-const color = "#545454";
+const URL_IMAGE_WRAPPER =
+  "url(https://cdn.pixabay.com/photo/2016/11/21/18/18/abstract-1846979_960_720.jpg)";
 
 class BlogInfo extends React.Component {
   render() {
     return (
       <Fragment>
-        <Flex>
-          <Box pl={[1, 3, 6]} pt={2} width={1 / 8} bg={bg}>
-            <Logo />
-          </Box>
-          <Box p={3} width={1} color={color} bg={bg}>
-            <Text>@MyBLog</Text>
-          </Box>
-        </Flex>
+        <FlexStyle justifyContent="center" urlImage={URL_IMAGE_WRAPPER}>
+          <BoxStyle width={1}>
+            <BlogContent />
+          </BoxStyle>
+        </FlexStyle>
       </Fragment>
     );
   }
